@@ -1,4 +1,6 @@
 # Course-Specific-Media-Player
+**Instructor:** Dr. Amir Jahanshahi  
+**Course:** Advanced Programming - Final Project 
 
 This project involves developing a media player tailored for the AP course. The media player should be able to play videos and display associated tags for each video. These tags are provided in an Excel file for every video, and the player should allow users to click on any tag to jump to the corresponding part of the video.
 
