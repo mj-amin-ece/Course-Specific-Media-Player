@@ -1,19 +1,48 @@
-# Course-Specific-Media-Player
-**Instructor:** Dr. Amir Jahanshahi  
-**Course:** Advanced Programming - Final Project 
+# Course-Specific Media Player
 
-This project involves developing a media player tailored for the AP course. The media player should be able to play videos and display associated tags for each video. These tags are provided in an Excel file for every video, and the player should allow users to click on any tag to jump to the corresponding part of the video.
+**A PyQt5 video player for recorded lectures. Each session comes with an Excel file of topic tags, and clicking a tag jumps straight to that part of the lecture.**
+
+![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
+![PyQt5](https://img.shields.io/badge/GUI-PyQt5-41CD52?logo=qt&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white)
+
+Final project for the *Advanced Programming* course (Dr. Amir Jahanshahi), Amirkabir University of Technology. Developed by Mohammad Javad Amin and Faeze.
 
 ## Features
-- **Video Playback**: The media player should support the playback of video files.
-- **Tag Display**: Each video will have an associated Excel file containing tags. These tags should be displayed while the video plays.
-- **Jump to Tag**: Clicking on any tag should cause the media player to jump to the part of the video corresponding to that tag.
 
-## Requirements
-- **Python**: This project is developed in Python.
-- **Excel File Support**: The media player must be able to read and display tags from Excel files.
+- **Tag navigation:** load a session's Excel tag file and click any topic to seek to its timestamp.
+- **Tag editing:** add or edit tags while you watch, then save the updated tag file anywhere.
+- **Playback controls:** play and pause, variable speed, volume, and skipping forward or back.
+- **Viewing:** full-screen and zoom, plus several color themes (default, sky, white, dark).
+- **Keyboard shortcuts** for seeking and zooming.
 
-- ## Usage
-- Load a video into the media player.
-- The associated tags from the Excel file will be displayed.
-- Click on any tag to jump to the relevant section in the video.
+A short screen recording is in [`docs/demo.mp4`](docs/demo.mp4), and the full write-up is in [`docs/report.pdf`](docs/report.pdf).
+
+## Repository structure
+
+```text
+.
+├── app/
+│   ├── main.py             # application entry point (VideoWindow)
+│   ├── requirements.txt
+│   └── image/              # backgrounds and icons
+├── sample-tags/            # tag files for the course sessions (session*.xlsx)
+└── docs/
+    ├── demo.mp4            # usage demo
+    └── report.pdf          # project report
+```
+
+## Getting started
+
+```bash
+cd app                      # icons are loaded relative to this folder
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+Open a lecture video, then load its tag file from `sample-tags/` to get clickable topics.
+
+## Author
+
+**Mohammad Javad Amin** · [GitHub](https://github.com/mj-amin-ece)
